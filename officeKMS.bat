@@ -1,6 +1,6 @@
-@echo off
+ï»¿@echo off
 
-set /p var=½Ğ¿é¤J§AªºOffice¦w¸Ë¦ì¸m(«á­±­n¥[\):
+set /p var=è«‹è¼¸å…¥ä½ çš„Officeå®‰è£ä½ç½®(å¾Œé¢è¦åŠ \):
 
 for /f delims^=^" %%i in ('echo %var%') do set test=%%iospp.vbs
 
@@ -21,7 +21,7 @@ IF EXIST "%test%" (
 	del %temp%\KMSXML.zip
 	del %temp%\KMSXML
 ) ELSE (
-	echo µL®Ä¥Ø¿ı
+	echo ç„¡æ•ˆç›®éŒ„
 )
 
 goto END
