@@ -1,4 +1,4 @@
-ï»¿@echo off
+@echo off
 
 set dc=%cd%
 
@@ -23,27 +23,27 @@ set Ent_LSTB=WNMTR-4C88C-JK8YV-HQ7T2-76DF9
 set Ent_LSTB_N=2F77B-TNFGY-69QQF-B8YKP-D69TJ
 IF "%~1"=="/?" (
 	echo Windows 10
-	echo å®¶åº­ç‰ˆ =^> Home
+	echo ®a®xª© =^> Home
 
-	echo å®¶åº­ç‰ˆ_N =^> Home_N
+	echo ®a®xª©_N =^> Home_N
 
-	echo å°ˆæ¥­ç‰ˆ =^> Pro
+	echo ±M·~ª© =^> Pro
 
-	echo å°ˆæ¥­ç‰ˆ_N =^> Pro_N
+	echo ±M·~ª©_N =^> Pro_N
 
-	echo æ•™è‚²ç‰ˆ =^> Edu
+	echo ±Ğ¨|ª© =^> Edu
 
-	echo æ•™è‚²ç‰ˆ_N =^> Edu_N
+	echo ±Ğ¨|ª©_N =^> Edu_N
 
-	echo ä¼æ¥­ç‰ˆ =^> Ent
+	echo ¥ø·~ª© =^> Ent
 
-	echo ä¼æ¥­ç‰ˆ_N =^> Ent_N
+	echo ¥ø·~ª©_N =^> Ent_N
 
-	echo ä¼æ¥­ç‰ˆLSTB =^> Ent_LSTB
+	echo ¥ø·~ª©LSTB =^> Ent_LSTB
 
-	echo ä¼æ¥­ç‰ˆLSTB_N =^> Ent_LSTB_N
+	echo ¥ø·~ª©LSTB_N =^> Ent_LSTB_N
 ) ELSE IF "%~1"=="" (
-	echo è«‹å¸¶åƒæ•¸
+	echo ½Ğ±a°Ñ¼Æ
 ) ELSE (
 	cd C:\windows\system32
 	cscript slmgr.vbs -skms kms.03k.org:1688
