@@ -48,7 +48,9 @@ IF "%~1"=="/?" (
 	cd C:\windows\system32
 	cscript slmgr.vbs -skms kms.03k.org:1688
 	cd %dc%
-	goto %~1
+	goto %~1 2>nul || (
+		echo Bad arg...
+	)
 )
 
 cd %dc%

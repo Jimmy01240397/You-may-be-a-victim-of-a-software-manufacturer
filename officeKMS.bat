@@ -1,6 +1,6 @@
 @echo off
 
-set /p var=請輸入你的Office安裝位置(後面要加\):
+set /p var=Please enter your Office installation location (add \ after it):
 
 for /f delims^=^" %%i in ('echo %var%') do set test=%%iospp.vbs
 

@@ -22,33 +22,34 @@ set Ent_LSTB=WNMTR-4C88C-JK8YV-HQ7T2-76DF9
 
 set Ent_LSTB_N=2F77B-TNFGY-69QQF-B8YKP-D69TJ
 IF "%~1"=="/?" (
-	echo Windows 10
-	echo 家庭版 =^> Home
+	echo Windows Home =^> Home
 
-	echo 家庭版_N =^> Home_N
+	echo Windows Home_N =^> Home_N
 
-	echo 專業版 =^> Pro
+	echo Windows Pro =^> Pro
 
-	echo 專業版_N =^> Pro_N
+	echo Windows Pro_N =^> Pro_N
 
-	echo 教育版 =^> Edu
+	echo Windows Education =^> Edu
 
-	echo 教育版_N =^> Edu_N
+	echo Windows Education_N =^> Edu_N
 
-	echo 企業版 =^> Ent
+	echo Windows Enterprise =^> Ent
 
-	echo 企業版_N =^> Ent_N
+	echo Windows Enterprise_N =^> Ent_N
 
-	echo 企業版LSTB =^> Ent_LSTB
+	echo Windows Enterprise LSTB =^> Ent_LSTB
 
-	echo 企業版LSTB_N =^> Ent_LSTB_N
+	echo Windows Enterprise LSTB_N =^> Ent_LSTB_N
 ) ELSE IF "%~1"=="" (
-	echo 請帶參數
+	echo Missing arg...
 ) ELSE (
 	cd C:\windows\system32
 	cscript slmgr.vbs -skms kms.03k.org:1688
 	cd %dc%
-	goto %~1
+	goto %~1 2>nul || (
+		echo Bad arg...
+	)
 )
 
 cd %dc%
