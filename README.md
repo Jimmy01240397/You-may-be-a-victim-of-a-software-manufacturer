@@ -1,5 +1,7 @@
 # You-may-be-a-victim-of-a-software-manufacturer
 
+![](https://github.com/user-attachments/assets/0ef5127b-a5b2-4324-9dfa-a279854b452d)
+
 ## windowsKMS.bat
 for windowsKMS.bat pls use cmd and 
 ``` batch
