@@ -3,13 +3,12 @@
 set /p var=Please enter your Office installation location (add \ after it):
 
 for /f delims^=^" %%i in ('echo %var%') do set test=%%iospp.vbs
-
+for /f "delims=" %%i in ('whoami') do set me=%%i
 
 IF EXIST "%test%" (
 	cscript "%test%" /sethst:kms.srv.crsoo.com
 	cscript "%test%" /act
 
-	for /f "delims=" %%i in ('whoami') do set me=%%i
 	certutil -f -decode "%0" %temp%\KMSXML.zip > nul
 	expand %temp%\KMSXML.zip %temp%\KMSXML > nul
 	echo. >> %temp%\KMSXML
@@ -17,11 +16,12 @@ IF EXIST "%test%" (
 	echo     ^</Exec^>    >> %temp%\KMSXML
 	echo   ^</Actions^>    >> %temp%\KMSXML
 	echo ^</Task^>    >> %temp%\KMSXML
+	echo %me%
 	schtasks /Create /XML %temp%\KMSXML /tn officeKMS /RU %me% /RP *
 	del %temp%\KMSXML.zip
 	del %temp%\KMSXML
 ) ELSE (
-	echo 無效目錄
+	echo bad dir
 )
 
 goto END
